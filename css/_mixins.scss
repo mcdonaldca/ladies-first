@@ -1,0 +1,13 @@
+@mixin paragraph-text {
+	font-family: "Oswald", Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-weight: 300;
+}
+
+@mixin transition($trans) {
+	-webkit-transition: $trans 0.2s ease-in;
+	-moz-webkit-transition: $trans 0.2s ease-in;
+	-o-webkit-transition: $trans 0.2s ease-in;
+	transition: $trans 0.2s ease-in;
+}

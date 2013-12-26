@@ -1,0 +1,5 @@
+config.php
+_config.php
+.DS_Store
+.sass-cache
+template.php

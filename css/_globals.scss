@@ -1,0 +1,205 @@
+//
+//		Grid layout
+//
+
+.span1 { width: 30%;  } // 300 / 1000 = 0.32
+.span2 { width: 65%;  } // 650 /1000 = 0.66
+.span3 { width: 100%; } // 1000 / 1000 = 1
+
+.span1,
+.span2,
+.span3 {
+	padding: 0;
+	margin: 0 5% 1% 0;
+	float: left;
+	display: block;
+}
+
+.alpha{ margin-left:  0; }
+.omega{ margin-right: 0; }
+
+
+
+
+
+//
+//		General styles
+//
+
+body {
+	width: 90%;
+	max-width: 940px;
+	margin: auto;
+
+	background: black;
+	color: white;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: $link-color;
+
+	&:hover {
+		color: white;
+	}
+}
+
+strong {
+		color: $light-gray;
+		font-weight: normal;
+}
+
+h1 {
+	margin: .5em 0;
+	float: left;
+
+	width: 100%;
+	background: $main-color;
+	padding-left: 10px;
+	font: 2em $anton-stack;
+	color: white;
+	font-weight: normal;
+}
+
+h2 {
+
+	font: 1.25em $oswald-stack;
+	font-weight: 300;
+
+	width: 100%;
+	background-color: $gray;
+	padding: 0 0 0 2.5em;
+	margin: 0 0 .3125em 0;	
+}
+
+p {
+	width: 100%;
+	padding: 5px;
+	margin: 0;
+	@include paragraph-text;
+}
+
+
+
+//
+//		Icon fonts
+//
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../icons/icomoon.eot');
+	src:url('../icons/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../icons/icomoon.woff') format('woff'),
+		url('../icons/icomoon.ttf') format('truetype'),
+		url('../icons/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon {
+	color: white;
+	font-family: 'icomoon';
+	font-size: 2em;
+	-webkit-font-smoothing: antialiased;
+
+	@include transition(color);
+
+	&:hover {
+		color: $main-color;
+		text-decoration: none;
+	}
+}
+
+.icon-facebook:before {
+	content: "\e499";
+}
+
+.icon-twitter:before {
+	content: "\e49e";
+}
+
+.icon-youtube:before {
+	content: "\e600";
+}
+
+.icon-email:before {
+	content: "\e48e";
+}
+
+.icon-instagram:before {
+	content: "\e49c";
+}
+
+
+
+
+
+//
+//		Header styles
+//
+
+.header {
+	width: 100%;
+
+	.logo {
+		width: 30%;
+		padding: 5px;
+		float: left;
+	}
+
+	ul.social {
+		list-style: none;
+		float: right;
+		margin-top: 3.5em;
+
+		li {
+			display: inline-block;
+			padding: .125em;
+		}
+	}
+
+	.navbar {
+		width: 100%;
+		float: left;
+
+		ul {
+			width: 100%;
+			list-style: none;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				padding: .3125em .9375em;
+				color: white;
+				font: 1.25em $anton-stack;
+				letter-spacing: .0625em;
+				background-color: black;
+
+				@include transition(background-color);
+
+				&:hover {
+					background-color: $main-color;
+				}
+
+				@each $cat in home, events, repertoire, audition, merchandise, meetus, alumni, contactus {
+					.#{$cat} &##{$cat} {
+						background-color: $main-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
