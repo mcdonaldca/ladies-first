@@ -28,14 +28,11 @@
     	$tag = $row["tag"];
     	$title = $row["title"];
     	$id = $row["id"];
-    ?><a href="lady?id=<?= $id ?>"><div class="lady <?= $tag ?>">
-    		<img class="no-js" src="img/ladies/<?= $tag ?>">
+    ?><a href="lady?id=<?= $id ?>"><div class="lady">
+    		<img class="no-js" src="img/ladies/<?= $tag ?>.png">
     		<div class="name"><?= $name ?></div>
     		<div class="title"><? if($title != "NULL") echo $title ?></div>
-    	</div></a><?php }
-
-
-	 	?>
+    	</div></a><?php } ?>
 
 	</div>
 

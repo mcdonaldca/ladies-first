@@ -14,24 +14,27 @@
  	<?php require("assets/header.html");
  		  	require("assets/config.php");
  		  	$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
- 		  	$rows = $db->query("SELECT * FROM general_information");
-		    foreach($rows as $row) {
-		      $gen_man = $row["gen_man"];
-		      $book_agent = $row["book_agent"];
-		      $press_con = $row["press_con"];
-		      $about = $row["about_us"];
-		    } ?>
 
-	<div class="span1 alpha">
-		<h1><div class='text'>Contacts</div></h1>
-		<p><strong>General Manager:</strong> <?= $gen_man ?></p>
-		<p><strong>Booking Agent:</strong> <?= $book_agent ?></p>
-		<p><strong>Press Contact:</strong> <?= $press_con ?></p>
-	</div>
-	<div class="span2 omega">
-		<img src="img/performing3.png" alt="A picture of Ladies First performing">
-		<h1><div class='text'>About Us</div></h1>
-		<?= $about ?>
+ 		  	$query = "SELECT * FROM alumni WHERE id =" . $_GET["id"];
+ 		  	$rows = $db->query($query);
+			  foreach($rows as $row) {
+			    $season = $row["season"];
+			    $year = $row["year"];
+			    $tag = $row["tag"];
+			    $members = $row["members"];
+			  } ?>
+
+	<div class="span3 alpha omega">
+		<h1><div class="text"><a href="alumni.php">&lt;&lt; Past Members</a></div></h1>
+	  <div class="span2 alpha">
+	    <h2><div class="text"><?= $season ?> <?= $year ?></div></h2>
+	    <br />
+	    <img src="img/alumni/<?= $tag ?>.png" alt="Picture of Ladies First alumni from <?= $season ?> <?= $year ?>"><br><br>
+	  </div>
+	  <div class="span1 omega">
+	    <h2><div class="text">Members</div></h2>
+	    <?= $members ?>
+	  </div>
 	</div>
 
 

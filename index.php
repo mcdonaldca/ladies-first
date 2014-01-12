@@ -15,7 +15,7 @@
 	  		require("assets/config.php");
 	  		$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
 
-	  		$query = 'SELECT about_main FROM contact_us';
+	  		$query = 'SELECT about_main FROM general_information';
 	 			$rows = $db->query($query);
 			  foreach($rows as $row) {
 			    $about = $row["about_main"];
