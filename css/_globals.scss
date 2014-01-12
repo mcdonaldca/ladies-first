@@ -22,17 +22,41 @@
 
 
 
+// 
+//		Clearfix
+//
+
+.cf {
+	&:before {
+		content: " ";
+    display: table;
+	}
+
+	&:after {
+		@extend .cf:before;
+		clear: both;
+	}
+
+	*zoom: 1;
+}
+
+
+
+
+
 //
 //		General styles
 //
 
 body {
 	width: 90%;
-	max-width: 940px;
+	max-width: 920px;
 	margin: auto;
 
 	background: black;
 	color: white;
+
+	@include paragraph-text;
 }
 
 img {
@@ -50,38 +74,59 @@ a {
 
 strong {
 		color: $light-gray;
-		font-weight: normal;
+		font-weight: 300;
 }
 
 h1 {
 	margin: .5em 0;
-	float: left;
 
 	width: 100%;
 	background: $main-color;
-	padding-left: 10px;
-	font: 2em $anton-stack;
-	color: white;
-	font-weight: normal;
+
+	.text {
+		font: 1.269em $anton-stack;
+		font-weight: normal;
+		color: white;
+		padding: 0 0 0 1em;
+	}
 }
 
 h2 {
-
-	font: 1.25em $oswald-stack;
-	font-weight: 300;
-
 	width: 100%;
 	background-color: $gray;
-	padding: 0 0 0 2.5em;
+	
 	margin: 0 0 .3125em 0;	
+
+	.text {
+		font: 1em $oswald-stack;
+		font-weight: 300;
+		padding: 0 0 0 2.5em;
+	}
+}
+
+h3 {
+	background-color: #333;
+	width: 6.25em;
+
+	font: 1em $oswald-stack;
+	font-weight: 300;
+	text-align: center;
+
+	margin: 0 auto .7em auto;
 }
 
 p {
 	width: 100%;
-	padding: 5px;
-	margin: 0;
-	@include paragraph-text;
+	
+	margin: .7em 0 .7em 0;
 }
+
+ul {
+	margin: .7em 0 .7em 0;
+}
+
+
+
 
 
 
@@ -103,10 +148,8 @@ p {
 .icon {
 	color: white;
 	font-family: 'icomoon';
-	font-size: 2em;
+	font-size: 2.5em;
 	-webkit-font-smoothing: antialiased;
-
-	@include transition(color);
 
 	&:hover {
 		color: $main-color;
@@ -175,7 +218,7 @@ p {
 				display: inline-block;
 				padding: .3125em .9375em;
 				color: white;
-				font: 1.25em $anton-stack;
+				font: 1.392em $anton-stack;
 				letter-spacing: .0625em;
 				background-color: black;
 
@@ -199,7 +242,34 @@ p {
 
 
 
+//
+//		Footer styles
+//
 
+.footer {
+	float: left;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2em 0;
 
+	background: $main-color;
+	height: 1.9em;
+	width: 100%;
+	text-align: right;
 
+	font-size: .7142em;
+	letter-spacing: 2px;
 
+	li {
+		display: inline;
+		margin-right: 2em;
+	}
+
+	a {
+		color: white;
+
+		&:hover {
+			color: $light-gray;
+		}
+	}
+}

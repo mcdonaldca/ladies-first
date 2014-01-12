@@ -16,3 +16,31 @@
 		width: 100%
 	}
 }
+
+.studio-albums {
+	table {
+		width: 100%;
+	}
+	.album {
+		width: 200px;
+		height: 200px;
+		position: relative;
+
+		.hoverimage {
+			@include transition(opacity);
+
+			&:hover {
+				opacity: .4;
+			}
+		}
+
+		.hovertitle {
+			position: absolute;
+			top: 2em;
+			width: 100%;
+			font-size: 1.5em;
+			text-align: center;
+		}
+	}
+}
+

@@ -25,10 +25,10 @@
 	</div>
 
 	<div class="span2 alpha">
-		<h1>About</h1>
+		<h1><div class="text">About</div></h1>
 		<p><?= $about ?></p>
 
-		<h1>Upcoming Events</h1>
+		<h1><div class="text">Upcoming Events</div></h1>
 		<?php $rows = $db->query('SELECT * FROM events WHERE category = "future" ORDER BY year, month_num, day, time LIMIT 2');
       		foreach($rows as $row) { ?>
 
@@ -39,11 +39,11 @@
 	      </div>
 	       
 	      <div class="eventspace">
-	      	<h2><?= $row["type"] ?>: <?= $row["title"] ?></h2>
+	      	<h2><div class="text"><?= $row["type"] ?>: <?= $row["title"] ?></div></h2>
 	     		<span class="info"><strong>TIME:</strong> <?= $row["time"] ?> <strong>+++ LOCATION:</strong> <?= $row["location"] ?>
 
 	     		<?php if($row["tickets"] != "NULL")
-	     					print("<strong>+++ TICKETS:</strong> " . $row["tickets"]);  ?></span><br />
+	     					echo "<strong>+++ TICKETS:</strong> " . $row["tickets"];  ?></span><br />
 
 	        <p><?= $row["description"] ?></p>
 	      </div>
@@ -52,7 +52,7 @@
 	
 
 	<div class="span1 omega">
-		<h1>Twitter</h1>
+		<h1><div class="text">Twitter</div></h1>
 		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/LadiesFirstMSU"  data-widget-id="305143131312103424">Tweets by @LadiesFirstMSU</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>
