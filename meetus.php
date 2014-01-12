@@ -24,10 +24,14 @@
 
     foreach($rows as $row) {
     	$name = $row["first_name"] . " " . $row["last_name"];
-    	echo $name;
-    ?>
-
-    <?php }
+    	$tag = $row["tag"];
+    	$title = $row["title"];
+    	$id = $row["id"];
+    ?><a href="lady?id=<?= $id ?>"><div class="lady <?= $tag ?>">
+    		<img class="no-js" src="img/ladies/<?= $tag ?>">
+    		<div class="name"><?= $name ?></div>
+    		<div class="title"><? if($title != "NULL") echo $title ?></div>
+    	</div></a><?php }
 
 
 	 	?>
@@ -36,6 +40,8 @@
 
 
     <?php require("assets/footer.html"); ?>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/meetus.js"></script>
  </body>
 
 </html>
