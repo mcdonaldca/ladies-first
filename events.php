@@ -17,8 +17,10 @@
 
  	<div class="span2 alpha">
  		<h1><div class="text">Future Events</div></h1>
- 		<?php $rows = $db->query('SELECT * FROM events WHERE category = "future" ORDER BY year, month_num, day, time');
-      		foreach($rows as $row) { ?>
+ 		<?php
+      $query = 'SELECT * FROM events WHERE category = "future" ORDER BY year, month_num, day, time';
+      $rows = $db->query($query);
+      foreach($rows as $row) { ?>
 
     <div class=" event cf">
       <div class="datespace">

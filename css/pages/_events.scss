@@ -1,22 +1,23 @@
 .datespace {
 	background: $gray;
-	width: 3.75em;
-	height: 5.625em;
+	width: 5.625em;
+	height: 8em;
 	text-align: center;
 	float: left;
 
 	.day {
-		font: 2.5em $anton-stack;
+		font: 3.5em $anton-stack;
 	}
 
 	.month {
 		@include paragraph-text;
+		font-size: 1.7em;
 	}
 }
 
 .eventspace {
 	min-height: 6.25em;
-	width: 35.45em;
+	width: 85%;
 	float: left;
 	margin: 0 0 0 .625em;
 	@include paragraph-text;

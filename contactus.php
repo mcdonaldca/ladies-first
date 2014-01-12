@@ -9,7 +9,7 @@
  	<link href='img/favicon.png' rel='icon' type='image/png'>
  </head>
 
- <body>
+ <body class="contactus">
  	<div class="wrapper">
  	<?php require("assets/header.html");
  		  	require("assets/config.php");
