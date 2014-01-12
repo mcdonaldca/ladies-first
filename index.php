@@ -15,10 +15,10 @@
 	  		require("assets/config.php");
 	  		$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
 
-	  		$query = 'SELECT * FROM main';
+	  		$query = 'SELECT about_main FROM contact_us';
 	 			$rows = $db->query($query);
 			  foreach($rows as $row) {
-			    $about = $row["about"];
+			    $about = $row["about_main"];
 			  } ?>
 
 	<div class="span3 omega">
