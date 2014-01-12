@@ -10,6 +10,7 @@
  </head>
 
  <body class="meetus">
+ 	<div class="wrapper">
  	<?php require("assets/header.html");
  		  	require("assets/config.php"); ?>
 
@@ -39,6 +40,7 @@
 	</div>
 
 
+		<div class="push"></div></div>
     <?php require("assets/footer.html"); ?>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/meetus.js"></script>

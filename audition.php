@@ -10,6 +10,7 @@
  </head>
 
  <body class="audition">
+ 	<div class="wrapper">
  	<?php require("assets/header.html");
  		  	require("assets/config.php");
  		  	$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
@@ -62,8 +63,8 @@
 	  	<?= $next ?>
 	  </div>
 
-
-    <?php require("assets/footer.html"); ?>
+  <div class="push"></div></div>
+  <?php require("assets/footer.html"); ?>
  </body>
 
 </html>

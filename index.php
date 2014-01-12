@@ -10,6 +10,7 @@
  </head>
 
  <body class='home'>
+ 	<div class="wrapper">
 	<?php require("assets/header.html");
 	  		require("assets/config.php");
 	  		$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
@@ -58,7 +59,7 @@
 	</div>
 
   
-
+	<div class="push"></div></div>
   <?php require("assets/footer.html"); ?>
  </body>
 

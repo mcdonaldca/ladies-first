@@ -30,6 +30,9 @@
   .cf:after {
     clear: both; }
 
+html, body {
+  height: 100%; }
+
 body {
   width: 90%;
   max-width: 920px;
@@ -188,6 +191,17 @@ ul {
     .footer a:hover {
       color: #999999; }
 
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -1.9em;
+  /* the bottom margin is the negative value of the footer's height */ }
+
+.push {
+  height: 1.9em;
+  /* .push must be the same height as .footer */ }
+
 .datespace {
   background: #333333;
   width: 3.75em;
@@ -246,6 +260,9 @@ ul {
     text-align: center; }
 
 .meetus a {
+  color: white; }
+
+h1 a {
   color: white; }
 
 .lady {

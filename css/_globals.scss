@@ -1,6 +1,6 @@
-//
-//		Grid layout
-//
+//------------------------------
+//	GRID LAYOUT
+//------------------------------
 
 .span1 { width: 30%;  } // 300 / 1000 = 0.32
 .span2 { width: 65%;  } // 650 /1000 = 0.66
@@ -22,9 +22,9 @@
 
 
 
-// 
-//		Clearfix
-//
+//------------------------------
+//	CLEARFIX
+//------------------------------
 
 .cf {
 	&:before {
@@ -44,9 +44,14 @@
 
 
 
-//
-//		General styles
-//
+//------------------------------
+//	GENERAL STYLES
+//------------------------------
+
+html, body {
+	height: 100%;
+}
+
 
 body {
 	width: 90%;
@@ -130,9 +135,9 @@ ul {
 
 
 
-//
-//		Icon fonts
-//
+//------------------------------
+//	ICON FONT
+//------------------------------
 
 @font-face {
 	font-family: 'icomoon';
@@ -181,9 +186,9 @@ ul {
 
 
 
-//
-//		Header styles
-//
+//------------------------------
+//	HEADER STYLES
+//------------------------------
 
 .header {
 	width: 100%;
@@ -242,9 +247,9 @@ ul {
 
 
 
-//
-//		Footer styles
-//
+//------------------------------
+//	FOOTER STYLES
+//------------------------------
 
 .footer {
 	float: left;
@@ -272,4 +277,17 @@ ul {
 			color: $light-gray;
 		}
 	}
+}
+
+// Sticky footer solution
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -1.9em; /* the bottom margin is the negative value of the footer's height */
+}
+
+.push {
+	height: 1.9em; /* .push must be the same height as .footer */
 }
