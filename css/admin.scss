@@ -1,0 +1,70 @@
+/* Style sheet compiled using Sass */
+
+//------------------------------
+//	DEFINE VARIABLES
+//------------------------------
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+//------------------------------
+//	GENERAL STYLES
+//------------------------------
+
+body {
+	background-color: black;
+	color: white;
+	text-align: center;
+
+	width: 640px;
+	margin: 100px auto 0 auto;
+	font: 15px $oswald-stack;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 20px;
+	background-color: $main-color;
+	font-weight: 300;
+	text-transform: capitalize;
+}
+
+h2 {
+	font-size: 20px;
+	line-height: 20px;
+	margin: 0;
+}
+
+h3 {
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 15px;
+}
+
+
+
+#header a {
+	background-color: $main-color;
+	padding: 2px 13px;
+	font-size: 13px;
+	color: white;
+	text-decoration: none;
+	font-weight: 300;
+
+	@include transition(background-color);
+
+	&:hover {
+		background-color: black;
+	}
+
+	@each $cat in home, events, repertoire, audition, merchandise, meetus, alumni, contactus {
+		##{$cat} .#{$cat} {
+			background-color: black;
+		}
+	}
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+}

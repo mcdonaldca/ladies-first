@@ -1,0 +1,59 @@
+/* Style sheet compiled using Sass */
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 640px;
+  margin: 100px auto 0 auto;
+  font: 15px Oswald, Tahoma, Arial, Helvetica, sans-serif;
+  font-weight: 300; }
+
+h1 {
+  font-size: 20px;
+  background-color: #7e1c59;
+  font-weight: 300;
+  text-transform: capitalize; }
+
+h2 {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0; }
+
+h3 {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 15px; }
+
+#header a {
+  background-color: #7e1c59;
+  padding: 2px 13px;
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  -webkit-transition: background-color 0.2s ease-in;
+  -moz-webkit-transition: background-color 0.2s ease-in;
+  -o-webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in; }
+  #header a:hover {
+    background-color: black; }
+  #header a #home .home {
+    background-color: black; }
+  #header a #events .events {
+    background-color: black; }
+  #header a #repertoire .repertoire {
+    background-color: black; }
+  #header a #audition .audition {
+    background-color: black; }
+  #header a #merchandise .merchandise {
+    background-color: black; }
+  #header a #meetus .meetus {
+    background-color: black; }
+  #header a #alumni .alumni {
+    background-color: black; }
+  #header a #contactus .contactus {
+    background-color: black; }
+
+td {
+  text-align: center;
+  padding: 10px; }
