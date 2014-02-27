@@ -54,14 +54,11 @@ html, body {
 
 
 body {
-	width: 90%;
-	max-width: 920px;
-	margin: auto;
+	width: 920px;
+	margin: 0 auto;
 
 	background: black;
 	color: white;
-
-	@include paragraph-text;
 }
 
 img {
@@ -74,26 +71,23 @@ a {
 
 	&:hover {
 		color: white;
+		border: 0;
 	}
 }
 
-strong {
+b {
 		color: $light-gray;
 		font-weight: 300;
 }
 
 h1 {
-	margin: .7em 0;
+	font: 33px $anton-stack;
+	font-weight: normal;
 
-	width: 100%;
-	background: $main-color;
-
-	.text {
-		font: 1.269em $anton-stack;
-		font-weight: normal;
-		color: white;
-		padding: 0 0 0 .5em;
-	}
+	letter-spacing: 1px;
+	background-color: $main-color;
+	padding-left: 20px; 
+	margin: 10px 0;
 }
 
 h2 {
@@ -122,8 +116,10 @@ h3 {
 
 p {
 	width: 100%;
-	margin: .7em 0 .7em 0;
-	font-size: 1.2em;
+	padding: 0 5px;
+	font: 14px $oswald-stack;
+	font-weight: 300;
+	letter-spacing: 1px;
 }
 
 ul {
@@ -157,6 +153,8 @@ ul {
 	font-family: 'icomoon';
 	font-size: 2.5em;
 	-webkit-font-smoothing: antialiased;
+
+	@include transition(color);
 
 	&:hover {
 		color: $main-color;
@@ -194,6 +192,7 @@ ul {
 
 .header {
 	width: 100%;
+	margin-top: 5px;
 
 	.logo {
 		width: 30%;
@@ -201,51 +200,46 @@ ul {
 		float: left;
 	}
 
-	ul.social {
-		list-style: none;
+	.social {
 		float: right;
-		margin-top: 3.5em;
+		margin-top: 30px;
 
-		li {
-			display: inline-block;
-			padding: .125em;
+		ul {
+			list-style: none;
+
+			li {
+				display: inline-block;
+				padding: 1px;
+			}
 		}
 	}
 
 	.navbar {
+		margin: 10px 0 20px 0;
 		width: 100%;
-		float: left;
+		text-align: center;
+		font: 20px $anton-stack;
+		letter-spacing: 1px;
 
-		ul {
-			width: 100%;
-			list-style: none;
-			padding: 0;
+		a {
+			padding: 5px 15px;
+			background-color: black;
+			color: white;
 
-			li {
-				display: inline-block;
-				padding: .3125em .87em;
-				color: white;
-				font: 1.392em $anton-stack;
-				letter-spacing: .0625em;
-				background-color: black;
+			@include transition(background-color);
 
-				@include transition(background-color);
-
-				&:hover {
-					background-color: $main-color;
-				}
-
-				@each $cat in home, events, repertoire, audition, merchandise, meetus, alumni, contactus {
-					.#{$cat} &##{$cat} {
-						background-color: $main-color;
-					}
-				}
+			&:hover {
+				background-color: $main-color;
 			}
 		}
 	}
 }
 
-
+@each $nav in home, events, repertoire, audition, merchandise, meetus, alumni, contactus {
+  .#{$nav} ##{$nav} {
+    background-color: $main-color; 
+  }
+}
 
 
 
@@ -254,29 +248,36 @@ ul {
 //------------------------------
 
 .footer {
-	float: left;
-	list-style: none;
-	padding: 0;
-	margin: 0 0 2em 0;
-
-	background: $main-color;
-	height: 1.9em;
+	height: 20px;
 	width: 100%;
-	text-align: right;
 
-	font-size: .7142em;
+	background-color: $main-color;
+	font: 10px $oswald-stack;
+	font-weight: 300;
 	letter-spacing: 2px;
+	padding: 5px 0 2px 0;
+	margin: 0 0 10px 0;
 
-	li {
-		display: inline;
-		margin-right: 2em;
-	}
+	ul {
+		float: right;
+		list-style: none;
+		margin: 0 10px 0 0;
+		padding: 0;
 
-	a {
-		color: white;
+		a {
+			color: white;
+			padding: 0 10px 0 5px;
+			border-right: #999 thin solid;
 
-		&:hover {
-			color: $light-gray;
+			@include transition(color);
+
+			&:hover {
+				color: #999;
+			}
+		}
+
+		li {
+			display: inline-block;
 		}
 	}
 }
@@ -287,9 +288,9 @@ ul {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -1.9em; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -37px; /* the bottom margin is the negative value of the footer's height */
 }
 
 .push {
-	height: 1.9em; /* .push must be the same height as .footer */
+	height: 37px; /* .push must be the same height as .footer */
 }

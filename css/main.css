@@ -34,15 +34,10 @@ html, body {
   height: 100%; }
 
 body {
-  width: 90%;
-  max-width: 920px;
-  margin: auto;
+  width: 920px;
+  margin: 0 auto;
   background: black;
-  color: white;
-  font-family: "Oswald", Tahoma, Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 300; }
+  color: white; }
 
 img {
   width: 100%; }
@@ -51,21 +46,20 @@ a {
   text-decoration: none;
   color: #dc0185; }
   a:hover {
-    color: white; }
+    color: white;
+    border: 0; }
 
-strong {
+b {
   color: #999999;
   font-weight: 300; }
 
 h1 {
-  margin: .7em 0;
-  width: 100%;
-  background: #7e1c59; }
-  h1 .text {
-    font: 1.269em Anton, Helvetica, sans-serif;
-    font-weight: normal;
-    color: white;
-    padding: 0 0 0 .5em; }
+  font: 33px Anton, Helvetica, sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+  background-color: #7e1c59;
+  padding-left: 20px;
+  margin: 10px 0; }
 
 h2 {
   width: 100%;
@@ -86,8 +80,10 @@ h3 {
 
 p {
   width: 100%;
-  margin: .7em 0 .7em 0;
-  font-size: 1.2em; }
+  padding: 0 5px;
+  font: 14px Oswald, Tahoma, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px; }
 
 ul {
   margin: .7em 0 .7em 0; }
@@ -106,7 +102,11 @@ ul {
   color: white;
   font-family: 'icomoon';
   font-size: 2.5em;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: color 0.2s ease-in;
+  -moz-webkit-transition: color 0.2s ease-in;
+  -o-webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in; }
   .icon:hover {
     color: #7e1c59;
     text-decoration: none; }
@@ -127,111 +127,117 @@ ul {
   content: "\e49c"; }
 
 .header {
-  width: 100%; }
+  width: 100%;
+  margin-top: 5px; }
   .header .logo {
     width: 30%;
     padding: 5px;
     float: left; }
-  .header ul.social {
-    list-style: none;
+  .header .social {
     float: right;
-    margin-top: 3.5em; }
-    .header ul.social li {
-      display: inline-block;
-      padding: .125em; }
-  .header .navbar {
-    width: 100%;
-    float: left; }
-    .header .navbar ul {
-      width: 100%;
-      list-style: none;
-      padding: 0; }
-      .header .navbar ul li {
+    margin-top: 30px; }
+    .header .social ul {
+      list-style: none; }
+      .header .social ul li {
         display: inline-block;
-        padding: .3125em .87em;
-        color: white;
-        font: 1.392em Anton, Helvetica, sans-serif;
-        letter-spacing: .0625em;
-        background-color: black;
-        -webkit-transition: background-color 0.2s ease-in;
-        -moz-webkit-transition: background-color 0.2s ease-in;
-        -o-webkit-transition: background-color 0.2s ease-in;
-        transition: background-color 0.2s ease-in; }
-        .header .navbar ul li:hover {
-          background-color: #7e1c59; }
-        .home .header .navbar ul li#home {
-          background-color: #7e1c59; }
-        .events .header .navbar ul li#events {
-          background-color: #7e1c59; }
-        .repertoire .header .navbar ul li#repertoire {
-          background-color: #7e1c59; }
-        .audition .header .navbar ul li#audition {
-          background-color: #7e1c59; }
-        .merchandise .header .navbar ul li#merchandise {
-          background-color: #7e1c59; }
-        .meetus .header .navbar ul li#meetus {
-          background-color: #7e1c59; }
-        .alumni .header .navbar ul li#alumni {
-          background-color: #7e1c59; }
-        .contactus .header .navbar ul li#contactus {
-          background-color: #7e1c59; }
+        padding: 1px; }
+  .header .navbar {
+    margin: 10px 0 20px 0;
+    width: 100%;
+    text-align: center;
+    font: 20px Anton, Helvetica, sans-serif;
+    letter-spacing: 1px; }
+    .header .navbar a {
+      padding: 5px 15px;
+      background-color: black;
+      color: white;
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-webkit-transition: background-color 0.2s ease-in;
+      -o-webkit-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in; }
+      .header .navbar a:hover {
+        background-color: #7e1c59; }
+
+.home #home {
+  background-color: #7e1c59; }
+
+.events #events {
+  background-color: #7e1c59; }
+
+.repertoire #repertoire {
+  background-color: #7e1c59; }
+
+.audition #audition {
+  background-color: #7e1c59; }
+
+.merchandise #merchandise {
+  background-color: #7e1c59; }
+
+.meetus #meetus {
+  background-color: #7e1c59; }
+
+.alumni #alumni {
+  background-color: #7e1c59; }
+
+.contactus #contactus {
+  background-color: #7e1c59; }
 
 .footer {
-  float: left;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2em 0;
-  background: #7e1c59;
-  height: 1.9em;
+  height: 20px;
   width: 100%;
-  text-align: right;
-  font-size: .7142em;
-  letter-spacing: 2px; }
-  .footer li {
-    display: inline;
-    margin-right: 2em; }
-  .footer a {
-    color: white; }
-    .footer a:hover {
-      color: #999999; }
+  background-color: #7e1c59;
+  font: 10px Oswald, Tahoma, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 5px 0 2px 0;
+  margin: 0 0 10px 0; }
+  .footer ul {
+    float: right;
+    list-style: none;
+    margin: 0 10px 0 0;
+    padding: 0; }
+    .footer ul a {
+      color: white;
+      padding: 0 10px 0 5px;
+      border-right: #999 thin solid;
+      -webkit-transition: color 0.2s ease-in;
+      -moz-webkit-transition: color 0.2s ease-in;
+      -o-webkit-transition: color 0.2s ease-in;
+      transition: color 0.2s ease-in; }
+      .footer ul a:hover {
+        color: #999; }
+    .footer ul li {
+      display: inline-block; }
 
 .wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -1.9em;
+  margin: 0 auto -37px;
   /* the bottom margin is the negative value of the footer's height */ }
 
 .push {
-  height: 1.9em;
+  height: 37px;
   /* .push must be the same height as .footer */ }
 
 .datespace {
   background: #333333;
-  width: 5.625em;
-  height: 8em;
+  width: 60px;
+  height: 90px;
+  padding-top: 5px;
   text-align: center;
   float: left; }
   .datespace .day {
-    font: 3.5em Anton, Helvetica, sans-serif; }
+    font: 40px Anton, Helvetica, sans-serif; }
   .datespace .month {
-    font-family: "Oswald", Tahoma, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 300;
-    font-size: 1.7em; }
+    font: 15px Oswald, Tahoma, Arial, Helvetica, sans-serif; }
 
 .eventspace {
-  min-height: 6.25em;
-  width: 85%;
-  float: left;
-  margin: 0 0 0 .625em;
-  font-family: "Oswald", Tahoma, Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 300; }
+  min-height: 100px;
+  max-width: 580px;
+  margin: 0 0 0 70px; }
   .eventspace .info {
-    font-size: .857em; }
+    font-size: 12px; }
 
 .song-list {
   margin: 0; }

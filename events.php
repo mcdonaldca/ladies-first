@@ -30,8 +30,8 @@
          
       <div class="eventspace">
        	<h2><div class="text"><?= $row["type"] ?>: <?= $row["title"] ?></div></h2>
-       	<span class="info"><strong>TIME:</strong> <?= $row["time"] ?> <strong>+++ LOCATION:</strong> <?= $row["location"] ?>
-  	   		<?php if($row["tickets"] != "NULL") echo("<strong>+++ TICKETS:</strong> " . $row["tickets"]);  ?>
+       	<span class="info"><b>TIME:</b> <?= $row["time"] ?> <b>+++ LOCATION:</b> <?= $row["location"] ?>
+  	   		<?php if($row["tickets"] != "NULL") echo("<b>+++ TICKETS:</b> " . $row["tickets"]);  ?>
      		</span><br />
 
          <p><?= $row["description"] ?></p>
@@ -51,8 +51,8 @@
          
       <div class="eventspace">
        	<h2><div class="text"><?= $row["type"] ?>: <?= $row["title"] ?></div></h2>
-       	<span class="info"><strong>TIME:</strong> <?= $row["time"] ?> <strong>+++ LOCATION:</strong> <?= $row["location"] ?>
-  	   		<?php if($row["tickets"] != "NULL") echo("<strong>+++ TICKETS:</strong> " . $row["tickets"]);  ?>
+       	<span class="info"><b>TIME:</b> <?= $row["time"] ?> <b>+++ LOCATION:</b> <?= $row["location"] ?>
+  	   		<?php if($row["tickets"] != "NULL") echo("<b>+++ TICKETS:</b> " . $row["tickets"]);  ?>
      		</span><br />
 
          <p><?= $row["description"] ?></p>
