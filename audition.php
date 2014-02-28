@@ -3,14 +3,13 @@
  <head>
  	<title>Ladies First</title>
  	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
- 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+ 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300' rel='stylesheet' type='text/css'>
  	<link href='css/main.css' rel='stylesheet' type='text/css'>
- 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
  	<link href='img/favicon.png' rel='icon' type='image/png'>
  </head>
 
  <body class="audition">
- 	<div class="wrapper">
+ 	<div class="wrapper cf">
  	<?php require("assets/header.html");
  		  	require("assets/config.php");
  		  	$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
@@ -33,14 +32,14 @@
 
 	  <div class="span1 alpha">
 	  	<img src="img/performing1.png" alt="Picture of Ladies First performing">
-	  	<h1><div class="text">Next Audition</div></h1>
-	  	<p><strong>Date:</strong> <?= $aud_date ?><br>
-	    <strong>Time:</strong> <?= $aud_time ?><br>
-	    <strong>Location:</strong> <?= $aud_loc ?></p>
+	  	<h1>Next Audition</h1>
+	  	<p><b>Date:</b> <?= $aud_date ?><br>
+	    <b>Time:</b> <?= $aud_time ?><br>
+	    <b>Location:</b> <?= $aud_loc ?></p>
 		</div>
 	  <div class="span1">
 	  	<img src="img/handsin.png" alt="Picture of Ladies First">
-	  	<h1><div class="text">Online Sign Up</div></h1>
+	  	<h1>Online Sign Up</h1>
 	  	<?php
 	  		if($dayone_link == "live") echo '<h3><a href="day.php?num=one">DAY ONE SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
     		if($daytwo_link == "live") echo '<h3><a href="day.php?num=two">DAY TWO SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
@@ -48,22 +47,21 @@
 	  </div>
 	  <div class="span1 omega">
 	  	<img src="img/performing2.png" alt="Picture of Ladies First performing">
-	  	<h1><div class="text">Callback Info</div></h1>
-	  	<p><strong>Date:</strong> <?= $call_date ?><br>
-	    <strong>Time:</strong> <?= $call_time ?><br>
-	    <strong>Location:</strong> <?= $call_loc ?></p>
+	  	<h1>Callback Info</h1>
+	  	<p><b>Date:</b> <?= $call_date ?><br>
+	    <b>Time:</b> <?= $call_time ?><br>
+	    <b>Location:</b> <?= $call_loc ?></p>
 	  </div>
 	  <div class="span3 omega">
-	  	<h1><div class="text">You Could Be A Lady!</div></h1>
-	  	<h2><div class="text">Are You Eligible?</div></h2>
+	  	<h1>You Could Be A Lady!</h1>
+	  	<h2>Are You Eligible?</h2>
 	  	<?= $eligible ?>
-	  	<h2><div class="text">What To Expect?</div></h2>
+	  	<h2>What To Expect?</h2>
 	  	<?= $expect ?>
-	  	<h2><div class="text">What Happens Next?</div></h2>
+	  	<h2>What Happens Next?</h2>
 	  	<?= $next ?>
 	  </div>
 
-  <div class="push"></div></div>
   <?php require("assets/footer.html"); ?>
  </body>
 

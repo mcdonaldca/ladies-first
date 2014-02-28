@@ -3,19 +3,18 @@
  <head>
  	<title>Ladies First</title>
  	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
- 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+ 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300' rel='stylesheet' type='text/css'>
  	<link href='css/main.css' rel='stylesheet' type='text/css'>
- 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
  	<link href='img/favicon.png' rel='icon' type='image/png'>
  </head>
 
  <body class="meetus">
- 	<div class="wrapper">
+ 	<div class="wrapper cf">
  	<?php require("assets/header.html");
  		  	require("assets/config.php"); ?>
 
 	<div class='span3'>
-	 	<h1><div class='text'>Meet the Ladies</div></h1>
+	 	<h1>Meet the Ladies</h1>
 
 	 	<?php
 
@@ -37,7 +36,6 @@
 	</div>
 
 
-		<div class="push"></div></div>
     <?php require("assets/footer.html"); ?>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/meetus.js"></script>

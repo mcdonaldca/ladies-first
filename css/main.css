@@ -36,6 +36,9 @@ html, body {
 body {
   width: 920px;
   margin: 0 auto;
+  font-family: Oswald, Tahoma, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
   background: black;
   color: white; }
 
@@ -44,10 +47,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #dc0185; }
-  a:hover {
-    color: white;
-    border: 0; }
+  color: inherit; }
 
 b {
   color: #999999;
@@ -62,13 +62,11 @@ h1 {
   margin: 10px 0; }
 
 h2 {
-  width: 100%;
+  font: 20px Oswald, Tahoma, Arial, Helvetica, sans-serif;
+  font-weight: 300;
   background-color: #333333;
-  margin: 0 0 .3125em 0; }
-  h2 .text {
-    font: 1em Oswald, Tahoma, Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    padding: 0 0 0 2.5em; }
+  padding-left: 40px;
+  margin: 0 0 5px 0; }
 
 h3 {
   background-color: #333;
@@ -81,15 +79,23 @@ h3 {
 p {
   width: 100%;
   padding: 0 5px;
-  font: 14px Oswald, Tahoma, Arial, Helvetica, sans-serif;
+  font: Oswald, Tahoma, Arial, Helvetica, sans-serif;
   font-weight: 300;
   letter-spacing: 1px; }
 
 ul {
   margin: .7em 0 .7em 0; }
 
-.purchase {
-  text-align: center; }
+p a, ul a {
+  text-decoration: none;
+  color: #dc0185; }
+  p a:hover, ul a:hover {
+    color: white;
+    border: 0; }
+
+.center {
+  text-align: center;
+  margin-top: 10px; }
 
 @font-face {
   font-family: 'icomoon';
@@ -101,7 +107,7 @@ ul {
 .icon {
   color: white;
   font-family: 'icomoon';
-  font-size: 2.5em;
+  font-size: 2em;
   -webkit-font-smoothing: antialiased;
   -webkit-transition: color 0.2s ease-in;
   -moz-webkit-transition: color 0.2s ease-in;
@@ -135,7 +141,7 @@ ul {
     float: left; }
   .header .social {
     float: right;
-    margin-top: 30px; }
+    margin-top: 45px; }
     .header .social ul {
       list-style: none; }
       .header .social ul li {
@@ -199,11 +205,7 @@ ul {
     .footer ul a {
       color: white;
       padding: 0 10px 0 5px;
-      border-right: #999 thin solid;
-      -webkit-transition: color 0.2s ease-in;
-      -moz-webkit-transition: color 0.2s ease-in;
-      -o-webkit-transition: color 0.2s ease-in;
-      transition: color 0.2s ease-in; }
+      border-right: #999 thin solid; }
       .footer ul a:hover {
         color: #999; }
     .footer ul li {
@@ -265,9 +267,10 @@ ul {
       opacity: .4; }
   .studio-albums .album .hovertitle {
     position: absolute;
-    top: 2em;
+    top: 30px;
     width: 100%;
-    font-size: 1.5em;
+    font-size: 20px;
+    font-weight: 300;
     text-align: center; }
 
 .meetus a {

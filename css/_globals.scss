@@ -57,6 +57,10 @@ body {
 	width: 920px;
 	margin: 0 auto;
 
+	font-family: $oswald-stack;
+	font-weight: 300;
+	letter-spacing: 1px;
+
 	background: black;
 	color: white;
 }
@@ -66,13 +70,8 @@ img {
 }
 
 a {
-	text-decoration: none;
-	color: $link-color;
-
-	&:hover {
-		color: white;
-		border: 0;
-	}
+		text-decoration: none;
+		color: inherit;
 }
 
 b {
@@ -91,16 +90,12 @@ h1 {
 }
 
 h2 {
-	width: 100%;
+	font: 20px $oswald-stack;
+	font-weight: 300;
 	background-color: $gray;
-	
-	margin: 0 0 .3125em 0;	
 
-	.text {
-		font: 1em $oswald-stack;
-		font-weight: 300;
-		padding: 0 0 0 2.5em;
-	}
+	padding-left: 40px;
+	margin: 0 0 5px 0;
 }
 
 h3 {
@@ -117,7 +112,7 @@ h3 {
 p {
 	width: 100%;
 	padding: 0 5px;
-	font: 14px $oswald-stack;
+	font: $oswald-stack;
 	font-weight: 300;
 	letter-spacing: 1px;
 }
@@ -126,8 +121,21 @@ ul {
 	margin: .7em 0 .7em 0;
 }
 
-.purchase {
+p, ul {
+	a {
+		text-decoration: none;
+		color: $link-color;
+
+		&:hover {
+			color: white;
+			border: 0;
+		}
+	}
+}
+
+.center {
 	text-align: center;
+	margin-top: 10px;
 }
 
 
@@ -151,7 +159,7 @@ ul {
 .icon {
 	color: white;
 	font-family: 'icomoon';
-	font-size: 2.5em;
+	font-size: 2em;
 	-webkit-font-smoothing: antialiased;
 
 	@include transition(color);
@@ -202,7 +210,7 @@ ul {
 
 	.social {
 		float: right;
-		margin-top: 30px;
+		margin-top: 45px;
 
 		ul {
 			list-style: none;
@@ -268,8 +276,6 @@ ul {
 			color: white;
 			padding: 0 10px 0 5px;
 			border-right: #999 thin solid;
-
-			@include transition(color);
 
 			&:hover {
 				color: #999;

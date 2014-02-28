@@ -3,14 +3,13 @@
  <head>
  	<title>Ladies First</title>
  	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
- 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+ 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300' rel='stylesheet' type='text/css'>
  	<link href='css/main.css' rel='stylesheet' type='text/css'>
- 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
  	<link href='img/favicon.png' rel='icon' type='image/png'>
  </head>
 
  <body class="repertoire">
- 	<div class="wrapper">
+ 	<div class="wrapper cf">
  	<?php require("assets/header.html");
  		  	require("assets/config.php");
  		  	$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass); ?>
@@ -30,7 +29,7 @@
         if($row["artist"] != "NULL") echo " - " . $row["artist"];
         ?>
         
-	        <ul><li><strong>
+	        <ul><li><b>
 	        
 	        <?php
 	        if($row["solo"] != "NULL") echo "(SOLO: " . $row["solo"] . ") ";
@@ -39,7 +38,7 @@
 	        if($row["arr"] != "NULL") echo "(ARR: " . $row["arr"] . ") ";
 	        if($row["extra"] != "NULL") echo $row["extra"]; ?>
 	        
-		      </strong></li></ul>
+		      </b></li></ul>
 
 	      </li>
 
@@ -61,19 +60,19 @@
  		<table>
 	  	<tr>
 			  <td><div class="album">
-			  	<a href="justdancewithme.php"><img src="img/merch/justdancewithme.png" alt="Just Dance With Me album cover" class="hoverimage"></a>
+			  	<a href="justdancewithme.php"><img src="img/merch/justdancewithme_prev.png" alt="Just Dance With Me album cover" class="hoverimage"></a>
 			  	<div class="hovertitle">Just Dance With Me</div>
 			  </div></td>
 			  <td><div class="album">
-			  	<a href="anolderversionofme.php"><img src="img/merch/anolderversionofme.png" alt="An Older Version of Me album cover" class="hoverimage"></a>
+			  	<a href="anolderversionofme.php"><img src="img/merch/anolderversionofme_prev.png" alt="An Older Version of Me album cover" class="hoverimage"></a>
 			  	<div class="hovertitle">An Older Version of Me</div>
 			  </div></td>
 			  <td><div class="album">
-			  	<a href="luckbealady.php"><img src="img/merch/luckbealady.png" alt="Luck Be A Lady album cover" class="hoverimage"></a>
+			  	<a href="luckbealady.php"><img src="img/merch/luckbealady_prev.png" alt="Luck Be A Lady album cover" class="hoverimage"></a>
 			  	<div class="hovertitle">Luck Be A Lady</div>
 			  </div></td>
 			  <td><div class="album">
-			  	<a href="theladiesroom.php"><img src="img/merch/theladiesroom.png" alt="The Ladies Room album cover" class="hoverimage"></a>
+			  	<a href="theladiesroom.php"><img src="img/merch/theladiesroom_prev.png" alt="The Ladies Room album cover" class="hoverimage"></a>
 			  	<div class="hovertitle">The Ladies Room</div>
 			  </div></td>
 		  </tr>
@@ -81,7 +80,6 @@
  	</div>
 
 
-	<div class="push"></div></div>
   <?php require("assets/footer.html"); ?>
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/repertoire.js" type="text/javascript"></script>

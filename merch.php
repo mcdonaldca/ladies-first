@@ -3,14 +3,13 @@
  <head>
  	<title>Ladies First</title>
  	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
- 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+ 	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300' rel='stylesheet' type='text/css'>
  	<link href='css/main.css' rel='stylesheet' type='text/css'>
- 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
  	<link href='img/favicon.png' rel='icon' type='image/png'>
  </head>
 
- <body>
- 	<div class="wrapper">
+ <body class="merchandise">
+ 	<div class="wrapper cf">
  	<?php require("assets/header.html");
  		  	require("assets/config.php");
  		  	$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
@@ -28,44 +27,42 @@
 			  }?>
 
 	<div class="span3 alpha omega">
-		<h1><div class="text"><?= $name ?></div></h1>
+		<h1><?= $name ?></h1>
 		<div class="span1 alpha">
-			<h2><div class="text">
+			<h2>
 			<?php if ($type == "shirt") echo "T-Shirt Design";
 						else if ($type == "album") echo "Album Art";
 			  		else if ($type == "other") echo "Preview";
 			?>
-			</div></h2>
+			</h2>
 			<img src="img/merch/<?= $tag ?>.png" alt="Picture of <?= $name ?>">
 			<? if ($backside == "true") { ?>
 
-			<h2><div class="text">Back Design</div></h2>
+			<h2>Back Design</h2>
 			<img src="img/merch/<?= $tag ?>_back.png" alt="Picture of backside of <?= $name ?>">
 
 			<?php } ?>
 		</div>
 
 		<div class="span1">
-			<h2><div class="text">
+			<h2>
 		  <?php if ($type == "album") echo "Tracklist";
 		  			else echo "Details"; ?>
 		  
-			</div></h2>
+			</h2>
 			<p><?= $details ?></p>
 		</div>
 
 		<div class="span1 omega">
-			<h2><div class="text">Purchase</div></h2>
+			<h2>Purchase</h2>
 			<p class="purchase">
 				<?= $name ?><br>
-				<?= $price ?><br><br>
+				<div class='center'><?= $price ?></div><br>
 				<?= $paypal_code ?>
 			</p>
 		</div>
 	</div>
 
-
-	<div class="push"></div></div>
   <?php require("assets/footer.html"); ?>
  </body>
 
