@@ -27,10 +27,10 @@
     	$tag = $row["tag"];
     	$title = $row["title"];
     	$id = $row["id"];
-    ?><a href="lady?id=<?= $id ?>"><div class="lady">
+    ?><a href="lady?id=<?= $id ?>"><div class="hover">
     		<img class="no-js" src="img/ladies/<?= $tag ?>.png">
-    		<div class="name"><?= $name ?></div>
-    		<div class="title"><? if($title != "NULL") echo $title ?></div>
+    		<div class="title"><?= $name ?></div>
+    		<div class="sub-title"><? if($title != "NULL") echo $title ?></div>
     	</div></a><?php } ?>
 
 	</div>
@@ -38,7 +38,7 @@
 
     <?php require("assets/footer.html"); ?>
     <script src="js/jquery.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/meetus.js"></script>
+    <script type="text/javascript" src="js/hover.js"></script>
  </body>
 
 </html>

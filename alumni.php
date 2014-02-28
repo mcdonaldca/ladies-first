@@ -40,9 +40,9 @@
   		$tag = $row["tag"];
   		$id = $row['id'];
 
-  		?><a href="alum.php?id=<?= $id ?>"><div class="lady alum">
+  		?><a href="alum.php?id=<?= $id ?>"><div class="hover third">
     		<img class="no-js" src="img/alumni/<?= $tag ?>_prev.png">
-    		<div class="name"><?= $season . ' ' . $year ?></div>
+    		<div class="title"><?= $season . ' ' . $year ?></div>
     	</div></a><?php } ?>
 
 	</div>
@@ -50,7 +50,7 @@
 
   <?php require("assets/footer.html"); ?>
   <script src="js/jquery.js" type="text/javascript"></script>
-  <script type="text/javascript" src="js/meetus.js"></script>
+  <script type="text/javascript" src="js/hover.js"></script>
  </body>
 
 </html>
