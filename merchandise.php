@@ -25,9 +25,9 @@
       	$tag = $row["tag"];
       	$id = $row["id"];
 
-      ?><a href="merch?id=<?= $id ?>"><div class="lady">
+      ?><a href="merch?id=<?= $id ?>"><div class="hover">
     		<img class="no-js" src="img/merch/<?= $tag ?>_prev.png">
-    		<div class="name"><?= $price ?></div>
+    		<div class="title"><?= $price ?></div>
     	</div></a><?php } ?>
  		<h2>Albums</h2>
  		<?php
@@ -38,17 +38,16 @@
       	$tag = $row["tag"];
       	$id = $row["id"];
 
-      ?><a href="merch?id=<?= $id ?>"><div class="lady">
+      ?><a href="merch?id=<?= $id ?>"><div class="hover">
     		<img class="no-js" src="img/merch/<?= $tag ?>_prev.png">
-    		<div class="name"><?= $price ?></div>
+    		<div class="title"><?= $price ?></div>
     	</div></a><?php } ?>
- 		<h2>Other</h2>
  	</div>
 
 
   <?php require("assets/footer.html"); ?>
   <script src="js/jquery.js" type="text/javascript"></script>
-  <script type="text/javascript" src="js/meetus.js"></script>
+  <script type="text/javascript" src="js/hover.js"></script>
  </body>
 
 </html>
