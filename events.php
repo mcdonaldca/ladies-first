@@ -2,7 +2,6 @@
 <html>
  <head>
  	<title>Ladies First</title>
- 	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
  	<link href='http://fonts.googleapis.com/css?family=Anton|Oswald:400,300' rel='stylesheet' type='text/css'>
   <link href='css/main.css' rel='stylesheet' type='text/css'>
  	<link href='img/favicon.png' rel='icon' type='image/png'>
