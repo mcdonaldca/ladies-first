@@ -71,30 +71,6 @@
   	</div></a><?php } ?>
 	</div>
 
- 	<div class="span3 omega studio-albums">
- 		<h1>Studio Albums</h1>
- 		<table>
-	  	<tr>
-			  <td><div class="album">
-			  	<a href="justdancewithme.php"><img src="img/merch/justdancewithme_prev.png" alt="Just Dance With Me album cover" class="hoverimage"></a>
-			  	<div class="hovertitle">Just Dance With Me</div>
-			  </div></td>
-			  <td><div class="album">
-			  	<a href="anolderversionofme.php"><img src="img/merch/anolderversionofme_prev.png" alt="An Older Version of Me album cover" class="hoverimage"></a>
-			  	<div class="hovertitle">An Older Version of Me</div>
-			  </div></td>
-			  <td><div class="album">
-			  	<a href="luckbealady.php"><img src="img/merch/luckbealady_prev.png" alt="Luck Be A Lady album cover" class="hoverimage"></a>
-			  	<div class="hovertitle">Luck Be A Lady</div>
-			  </div></td>
-			  <td><div class="album">
-			  	<a href="theladiesroom.php"><img src="img/merch/theladiesroom_prev.png" alt="The Ladies Room album cover" class="hoverimage"></a>
-			  	<div class="hovertitle">The Ladies Room</div>
-			  </div></td>
-		  </tr>
-	  </table>
- 	</div>
-
 
   <?php require("assets/footer.html"); ?>
   <script src="js/jquery.js" type="text/javascript"></script>
