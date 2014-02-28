@@ -25,7 +25,7 @@
       	$tag = $row["tag"];
       	$id = $row["id"];
 
-      ?><a href="merch?id=<?= $id ?>"><div class="hover">
+      ?><a href="merch.php?id=<?= $id ?>"><div class="hover">
     		<img class="no-js" src="img/merch/<?= $tag ?>_prev.png">
     		<div class="title"><?= $price ?></div>
     	</div></a><?php } ?>
@@ -38,7 +38,7 @@
       	$tag = $row["tag"];
       	$id = $row["id"];
 
-      ?><a href="merch?id=<?= $id ?>"><div class="hover">
+      ?><a href="merch.php?id=<?= $id ?>"><div class="hover">
     		<img class="no-js" src="img/merch/<?= $tag ?>_prev.png">
     		<div class="title"><?= $price ?></div>
     	</div></a><?php } ?>

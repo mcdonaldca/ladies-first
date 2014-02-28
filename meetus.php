@@ -27,7 +27,7 @@
     	$tag = $row["tag"];
     	$title = $row["title"];
     	$id = $row["id"];
-    ?><a href="lady?id=<?= $id ?>"><div class="hover">
+    ?><a href="lady.php?id=<?= $id ?>"><div class="hover">
     		<img class="no-js" src="img/ladies/<?= $tag ?>.png">
     		<div class="title"><?= $name ?></div>
     		<div class="sub-title"><? if($title != "NULL") echo $title ?></div>
