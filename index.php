@@ -8,7 +8,7 @@
   <link href='img/favicon.png' rel='icon' type='image/png'>
  </head>
 
- <body class='home'>
+ <body class="home">
   <div class="wrapper cf">
 	<?php require("assets/header.html");
 	  		require("assets/config.php");
@@ -20,10 +20,14 @@
 			    $about = $row["about_main"];
 			  } ?>
 
-
-		<div class="span3 omega">
-			<img src="img/main_photo.png" alt="Ladies First" />
-		</div>
+	  <div class="span3 omega">
+	  	<ul class="rslides">
+	  		<li><img src="img/iccaquarterfinals1.png" alt=""><div class="caption">ICCA Quarterfinals, Spring 2014</div></li>
+			  <li><img src="img/accapalooza11.png" alt=""><div class="caption">Accapalooza, Fall 2011</div></li>
+			  <li><img src="img/iccaquarterfinals2.png" alt=""><div class="caption">ICCA Quarterfinals, Spring 2014</div></li>
+			  <li><img src="img/superheroesvsvillains.png" alt=""><div class="caption">Superheroes vs. Villains, Fall 2013</div></li>
+			</ul>
+	  </div>
 
 		<div class="span2 alpha">
 			<h1>About</h1>
@@ -61,6 +65,18 @@
 
   
   <?php require("assets/footer.html"); ?>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
+  <script type="text/javascript">
+	  $(function() {
+	    $(".rslides").responsiveSlides({
+	    	auto: true,
+	    	speed: 350,
+	    	timeout: 2500,
+	    	pager: true
+	    });
+	  });
+	</script>
  </body>
 
 </html>
