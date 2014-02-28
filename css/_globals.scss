@@ -165,29 +165,44 @@ p, ul {
 	@include transition(color);
 
 	&:hover {
-		color: $main-color;
 		text-decoration: none;
 	}
+
 }
 
 .icon-facebook:before {
 	content: "\e499";
 }
+.icon-facebook:hover {
+	color: #48639F;
+}
 
 .icon-twitter:before {
 	content: "\e49e";
+}
+.icon-twitter:hover {
+	color: #55ACEE;
 }
 
 .icon-youtube:before {
 	content: "\e600";
 }
+.icon-youtube:hover {
+	color: #E12A27;
+}
 
 .icon-email:before {
 	content: "\e48e";
 }
+.icon-email:hover {
+	color: $main-color;
+}
 
 .icon-instagram:before {
 	content: "\e49c";
+}
+.icon-instagram:hover {
+	color: #C0AF97;
 }
 
 
@@ -203,14 +218,14 @@ p, ul {
 	margin-top: 5px;
 
 	.logo {
-		width: 30%;
+		width: 250px;
 		padding: 5px;
 		float: left;
 	}
 
 	.social {
 		float: right;
-		margin-top: 45px;
+		margin-top: 40px;
 
 		ul {
 			list-style: none;
