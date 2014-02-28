@@ -15,7 +15,7 @@
  		  	$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass); ?>
 
  	<div class="span2 alpha">
- 		<h1><div class="text">Repertoire</div></h1>
+ 		<h1>Repertoire</h1>
  		<ul class="song-list cf">
 	    <?php 
 	      $rows = $db->query('SELECT * FROM repertoire ORDER BY song');
@@ -47,7 +47,7 @@
  	</div>
 
  	<div class="span1 omega videos">
- 		<h1><div class="text">Videos</div></h1>
+ 		<h1>Videos</h1>
  		<?php 
 	      $rows = $db->query('SELECT * FROM videos ORDER BY id');
 	      foreach ($rows as $row) { ?> 
@@ -55,8 +55,24 @@
  		<?php } ?>
  	</div>
 
+	<div class="span3 omega studio-albums">
+ 		<h1>Studio Albums</h1>
+	 	<?php
+	 			$query = 'SELECT * FROM merchandise WHERE type = "album" ORDER BY name';
+	      $rows = $db->query($query);
+	      foreach($rows as $row) {
+	      	$name = $row["name"];
+	      	$tag = $row["tag"];
+	      	$id = $row["id"];
+
+    ?><a href="merch?id=<?= $id ?>"><div class="hover">
+  		<img class="no-js" src="img/merch/<?= $tag ?>_prev.png">
+  		<div class="title"><?= $name ?></div>
+  	</div></a><?php } ?>
+	</div>
+
  	<div class="span3 omega studio-albums">
- 		<h1><div class="text">Studio Albums</div></h1>
+ 		<h1>Studio Albums</h1>
  		<table>
 	  	<tr>
 			  <td><div class="album">
@@ -82,7 +98,7 @@
 
   <?php require("assets/footer.html"); ?>
   <script src="js/jquery.js" type="text/javascript"></script>
-  <script src="js/repertoire.js" type="text/javascript"></script>
+  <script src="js/hover.js" type="text/javascript"></script>
  </body>
 
 </html>

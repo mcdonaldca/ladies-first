@@ -1,7 +1,7 @@
-$(".lady img").removeClass("no-js");
-$(".name, .title").hide();
+$(".hover img").removeClass("no-js");
+$(".title, .sub-title").hide();
 
-$(".lady img").hover(
+$(".hover img").hover(
 	function () {
 		$(this).next().show(200);
 		$(this).next().next().show(200);
