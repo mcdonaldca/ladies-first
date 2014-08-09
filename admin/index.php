@@ -12,7 +12,7 @@
 		</div>
 
 		<?php
-	    require_once("../assets/config.php");
+	    require("../assets/config.php");
 	    $db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass);
 	    $rows = $db->query("SELECT * FROM general_information");
 	    foreach($rows as $row) {
