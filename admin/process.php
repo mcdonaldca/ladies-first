@@ -69,21 +69,20 @@
 		    if( $success == false ) { ?>
 		    	<h1>Invalid</h1>
 				  Either your query was invalid, or the database is down.<br>
-				  (Please do not refresh page!)
 
 		    <?php } else { ?>		    
 
 				<h1><?= $page ?></h1>
 	    	Action Completed<br>
-	  		(Please do not refresh page!)
 
 		<?php }  } else { ?>
 
     	<h1>Invalid</h1>
 		 Something's wrong -- go back and try again.<br>
-		 (Please do not refresh page!)
 
   	<?php } ?>
+
+  	(Please do not refresh page!)
 		
 	</body>
 </html>

@@ -19,8 +19,8 @@
 		      $aud_date = $row["aud_date"];
 		      $aud_time = $row["aud_time"];
 		      $aud_loc = $row["aud_loc"];
-		      $dayone_link = $row["dayone_link"];
-		      $daytwo_link = $row["daytwo_link"];
+		      $day_one_link = $row["day_one_link"];
+		      $day_two_link = $row["day_two_link"];
 		      $call_date = $row["call_date"];
 		      $call_time = $row["call_time"];
 		      $call_loc = $row["call_loc"];
@@ -40,8 +40,8 @@
 	  	<img src="img/handsin.png" alt="Picture of Ladies First">
 	  	<h1>Online Sign Up</h1>
 	  	<?php
-	  		if($dayone_link == "live") echo '<h3><a href="day.php?num=one">DAY ONE SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
-    		if($daytwo_link == "live") echo '<h3><a href="day.php?num=two">DAY TWO SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
+	  		if($day_one_link == "live") echo '<h3><a href="day.php?num=one">DAY ONE SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
+    		if($day_two_link == "live") echo '<h3><a href="day.php?num=two">DAY TWO SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
     	?>
 	  </div>
 	  <div class="span1 omega">
