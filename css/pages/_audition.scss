@@ -1,0 +1,21 @@
+h3.live {
+	color: $link-color;
+
+	&:hover {
+		color: white;
+	}
+}
+
+.audition td {
+	background-color: $gray;
+	width: 4.375em;
+	text-align: center;
+}
+
+.audition #open {
+	background-color: $main-color;
+}
+
+.audition #open a {
+	color: white;
+}

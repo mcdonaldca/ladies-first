@@ -236,6 +236,83 @@ p a, ul a {
   height: 37px;
   /* .push must be the same height as .footer */ }
 
+h3.live {
+  color: #dc0185; }
+  h3.live:hover {
+    color: white; }
+
+.audition td {
+  background-color: #333333;
+  width: 4.375em;
+  text-align: center; }
+
+.audition #open {
+  background-color: #7e1c59; }
+
+.audition #open a {
+  color: white; }
+
+.datespace {
+  background: #333333;
+  width: 60px;
+  height: 90px;
+  padding-top: 5px;
+  text-align: center;
+  float: left; }
+  .datespace .day {
+    font: 40px Anton, Helvetica, sans-serif; }
+  .datespace .month {
+    font: 15px Oswald, Tahoma, Arial, Helvetica, sans-serif; }
+
+.eventspace {
+  min-height: 100px;
+  max-width: 580px;
+  margin: 0 0 0 70px; }
+  .eventspace .info {
+    font-size: 12px; }
+
+.hover {
+  width: 25%;
+  display: inline-block;
+  position: relative;
+  -webkit-backface-visibility: hidden; }
+  .hover img {
+    width: 90%;
+    padding: 5%;
+    -webkit-transition: opacity 0.2s ease-in;
+    -moz-webkit-transition: opacity 0.2s ease-in;
+    -o-webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in; }
+    .hover img.no-js {
+      opacity: .5; }
+    .hover img:hover {
+      opacity: .5; }
+  .hover .title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    position: absolute;
+    top: 1em; }
+  .hover .sub-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    top: 3.5em; }
+  .hover.third {
+    width: 33%; }
+
+.song-list {
+  margin: 0; }
+  .song-list ul {
+    margin: 0; }
+  .song-list li {
+    margin: 0; }
+
+.videos iframe {
+  padding: 1em 0;
+  width: 100%; }
+
 .rslides {
   position: relative;
   list-style: none;
@@ -288,64 +365,3 @@ p a, ul a {
       background: #7e1c59; }
     .rslides1_tabs li:hover {
       background: #dc0185; }
-
-.datespace {
-  background: #333333;
-  width: 60px;
-  height: 90px;
-  padding-top: 5px;
-  text-align: center;
-  float: left; }
-  .datespace .day {
-    font: 40px Anton, Helvetica, sans-serif; }
-  .datespace .month {
-    font: 15px Oswald, Tahoma, Arial, Helvetica, sans-serif; }
-
-.eventspace {
-  min-height: 100px;
-  max-width: 580px;
-  margin: 0 0 0 70px; }
-  .eventspace .info {
-    font-size: 12px; }
-
-.song-list {
-  margin: 0; }
-  .song-list ul {
-    margin: 0; }
-  .song-list li {
-    margin: 0; }
-
-.videos iframe {
-  padding: 1em 0;
-  width: 100%; }
-
-.hover {
-  width: 25%;
-  display: inline-block;
-  position: relative;
-  -webkit-backface-visibility: hidden; }
-  .hover img {
-    width: 90%;
-    padding: 5%;
-    -webkit-transition: opacity 0.2s ease-in;
-    -moz-webkit-transition: opacity 0.2s ease-in;
-    -o-webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in; }
-    .hover img.no-js {
-      opacity: .5; }
-    .hover img:hover {
-      opacity: .5; }
-  .hover .title {
-    width: 100%;
-    text-align: center;
-    font-size: 1.5em;
-    position: absolute;
-    top: 1em; }
-  .hover .sub-title {
-    width: 100%;
-    text-align: center;
-    font-size: 1em;
-    position: absolute;
-    top: 3.5em; }
-  .hover.third {
-    width: 33%; }

@@ -40,8 +40,8 @@
 	  	<img src="img/handsin.png" alt="Picture of Ladies First">
 	  	<h1>Online Sign Up</h1>
 	  	<?php
-	  		if($day_one_link == "live") echo '<h3><a href="day.php?num=one">DAY ONE SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
-    		if($day_two_link == "live") echo '<h3><a href="day.php?num=two">DAY TWO SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
+	  		if($day_one_link == "live") echo '<h3 class="live"><a href="day.php?num=one">DAY ONE SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
+    		if($day_two_link == "live") echo '<h3 class="live"><a href="day.php?num=two">DAY TWO SIGN UP</a></h3>'; else echo "<h3>CLOSED</h3>";
     	?>
 	  </div>
 	  <div class="span1 omega">

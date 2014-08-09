@@ -15,13 +15,16 @@
  		  	$day = $_GET["num"];
 
  		  	$query = "error";
- 		  	if ( $day == 'one' ) $query = "SELECT day_one, day_one_start, day_one_end FROM audition";
-				else if ( $day == 'two' ) $query = "SELECT day_two, day_two_start, day_two_end FROM audition";
+ 		  	if ( $day == 'one' ) 			$query = "SELECT day_one, day_one_start, day_one_end, day_one_link FROM audition";
+				else if ( $day == 'two' ) $query = "SELECT day_two, day_two_start, day_two_end, day_two_link FROM audition";
 
+				// Make sure a valid day has been selected
 				if( $query != "error" ) {
 
 				$rows = $db->query($query);
 				foreach ($rows as $row) {
+					$day_one_live = $row["day_one_link"];
+					$day_two_live = $row["day_two_link"];
 					if ( $day == 'one' ) {
 						$start = $row["day_one_start"]; 
 						$end = $row["day_one_end"]; 
@@ -33,7 +36,10 @@
 						$day = "Two";
 						$aud_date = $row["day_two"]; 
 					}
-				} 
+				}
+
+				// Validate that the sign up should even be available
+				if( ($day == "One" && $day_one_live == "live") || ($day = "Two" && $day_two_live == "live") ) { 
 
 				class Time {
 		
@@ -148,9 +154,17 @@
   </table>
 
 
-  <?php } else { ?> 
+  <?php // If the day page isn't currently live
+				} else { ?>
+
+    <h1>Uh-oh Oreo</h1>
+    <p>You shouldn't be here! Auditions may not be currently going on or you may be on the wrong sign up page. <a href="audition.php">Start over</a>?</p>
+
+  <?php // If an invalid day value is in the url
+        } } else { ?> 
     <h1>Oh Snap</h1>
     <p>Something appears to have gone awry. <a href="audition.php">Start over</a>?</p>
+    
   <?php }
         require("assets/footer.html"); ?>
  </body>
