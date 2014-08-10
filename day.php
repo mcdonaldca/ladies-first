@@ -39,7 +39,7 @@
 				}
 
 				// Validate that the sign up should even be available
-				if( ($day == "One" && $day_one_live == "live") || ($day = "Two" && $day_two_live == "live") ) { 
+				if( ($day == "One" && $day_one_live == "live") || ($day == "Two" && $day_two_live == "live") ) { 
 
 				class Time {
 		
