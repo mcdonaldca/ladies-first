@@ -47,12 +47,27 @@ h3.live {
 
 	input[type="submit"] {
 		font: 1em $oswald-stack;
+		font-weight: 300;
 		letter-spacing: 1px;
 		color: white;
 		background: $main-color;
 		border: none;
 		display: block;
 		width: 13em;
+		margin: 10px auto 0 auto;
+		cursor: pointer;
+	}
+
+	.check {
+		background-color: $gray;
+		width: 30%;
+		padding: 5px 10px;
+		margin: 0 auto;
+	}
+
+	.options {
+		text-align: center;
+		width: 30%;
 		margin: 10px auto 0 auto;
 	}
 

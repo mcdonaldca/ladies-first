@@ -268,12 +268,23 @@ h3.live {
     width: 12.72em; }
   .audition input[type="submit"] {
     font: 1em Oswald, Tahoma, Arial, Helvetica, sans-serif;
+    font-weight: 300;
     letter-spacing: 1px;
     color: white;
     background: #7e1c59;
     border: none;
     display: block;
     width: 13em;
+    margin: 10px auto 0 auto;
+    cursor: pointer; }
+  .audition .check {
+    background-color: #333333;
+    width: 30%;
+    padding: 5px 10px;
+    margin: 0 auto; }
+  .audition .options {
+    text-align: center;
+    width: 30%;
     margin: 10px auto 0 auto; }
 
 .datespace {
