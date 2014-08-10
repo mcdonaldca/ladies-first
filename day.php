@@ -135,7 +135,7 @@
 						$url = "reserve.php?date=$aud_date&time=$slot_time&ind=$item&day=$day";
 						$info = explode(":", $lines[$item]);
 						if( $info[0] == "open" ) {
-							echo "<td id='open'><a href='$url'>";
+							echo "<td class='open'><a href='$url'>";
 						} else echo '<td>';
 
 						echo $slot_time;
@@ -164,7 +164,7 @@
         } } else { ?> 
     <h1>Oh Snap</h1>
     <p>Something appears to have gone awry. <a href="audition.php">Start over</a>?</p>
-    
+
   <?php }
         require("assets/footer.html"); ?>
  </body>
