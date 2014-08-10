@@ -132,7 +132,7 @@
 		
 					if( $item < $length ) {
 						$slot_time = $times[$item]->{'time_disp'};
-						$url = "reserve.php?date=$aud_date&time=$slot_time&ind=$item&day=$day";
+						$url = "reserve.php?date=$aud_date&time=$slot_time&index=$item";
 						$info = explode(":", $lines[$item]);
 						if( $info[0] == "open" ) {
 							echo "<td class='open'><a href='$url'>";

@@ -9,9 +9,7 @@
 
  <body class="audition">
  	<div class="wrapper cf">
- 	<?php require("assets/header.html");
- 		  	require("assets/config.php");
- 		  	$db = new PDO("mysql:dbname=$dbname;host=localhost", $dbuser, $dbpass); ?>
+ 	<?php require("assets/header.html"); ?>
 
   <h1>Verify Information</h1>
 
@@ -30,8 +28,7 @@
 	    <input type="hidden" name="phone" value="<?= $_POST["phone"]; ?>">
 	    <input type="hidden" name="date" value="<?= $_POST["date"]; ?>">
 	    <input type="hidden" name="time" value="<?= $_POST["time"]; ?>">
-	    <input type="hidden" name="ind" value="<?= $_POST["ind"]; ?>">
-	    <input type="hidden" name="day" value="<?= $_POST["day"]; ?>">
+	    <input type="hidden" name="index" value="<?= $_POST["index"]; ?>">
 		</form>
 		<form action="reserve.php" method="post">
 			<input type="submit" value="No, I made a mistake">
@@ -40,8 +37,7 @@
 	    <input type="hidden" name="phone" value="<?= $_POST["phone"]; ?>">
 			<input type="hidden" name="date" value="<?= $_POST["date"]; ?>">
 	    <input type="hidden" name="time" value="<?= $_POST["time"]; ?>">
-	    <input type="hidden" name="ind" value="<?= $_POST["ind"]; ?>">
-	    <input type="hidden" name="day" value="<?= $_POST["day"]; ?>">
+	    <input type="hidden" name="index" value="<?= $_POST["index"]; ?>">
 		</form>
 		<form action="index.php">
 			<input type="submit" value="No, I changed my mind">

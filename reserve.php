@@ -11,7 +11,7 @@
  	<div class="wrapper cf">
  	<?php require("assets/header.html"); ?>
 
-  <h1>Audition Day One - <?php print $_REQUEST["date"] ?> - <?php print $_REQUEST["time"] ?> PM</h1>
+  <h1>Audition - <?php print $_REQUEST["date"] ?> - <?php print $_REQUEST["time"] ?> PM</h1>
   <p>If you need to change your audition slot after you've signed up, e-mail <a href="mailto:ladies@msu.edu">ladies@msu.edu</a> and we'll help you out!</p>
   <form action="check.php" method="post">
   	<fieldset>
@@ -23,10 +23,9 @@
   		Your Phone Number:
   		<input type="text" name="phone" maxlength="10" id="phone" value="<?= $_POST["phone"] ?>" /><br />
   		<input type="submit" value="Reserve Audition Slot" />
-  		<input type="hidden" name="date" value="<?= $_GET["date"]; ?>" />
-  		<input type="hidden" name="time" value="<?= $_GET["time"]; ?>" />
-  		<input type="hidden" name="ind" value ="<?= $_GET["ind"]; ?>" />
-  		<input type="hidden" name="day" value ="<?= $_GET["day"]; ?>" />
+  		<input type="hidden" name="date" value="<?= $_REQUEST["date"]; ?>" />
+  		<input type="hidden" name="time" value="<?= $_REQUEST["time"]; ?>" />
+  		<input type="hidden" name="index" value ="<?= $_REQUEST["index"]; ?>" />
   	</fieldset>
   </form>
 
